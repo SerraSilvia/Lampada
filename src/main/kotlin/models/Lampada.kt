@@ -1,17 +1,17 @@
 package models
 
 class Lampada {
-
+    private var idLampada:String = ""
         private var encendreApagar:Boolean = false
         private var color:String = "blanc"
         private var intensitat:Int = 0
-        private var idLampada:String = ""
+
 
         constructor(onOff:Boolean, color:String, intensitat:Int, id:String){
+            this.idLampada=id
             this.encendreApagar=onOff
             this.color=color
             this.intensitat=intensitat
-            this.idLampada=id
         }
 
         fun encendre() {
@@ -26,8 +26,8 @@ class Lampada {
             return this.color
         }
 
-        fun setColor(c:String) {
-            this.color = c
+        fun setColor(c: Array<String>) {
+            this.color = c.toString()
         }
 
 
@@ -50,6 +50,4 @@ class Lampada {
         override fun toString(): String{
             return "La lampada d'id: ${this.idLampada}  està: ${this.encendreApagar} amb el color: ${this.color} en intensitat: ${this.intensitat}."
         }
-
-
     }
