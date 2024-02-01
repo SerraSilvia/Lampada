@@ -4,7 +4,7 @@ import models.Lampada
 import utilities.*
 
 fun main() {
-    var colors = arrayOf("${RED_BOLD}vermell$RESET", "${GREEN_BOLD}verd$RESET", "${BLUE_BOLD}blau$RESET", "${YELLOW_BOLD}groc$RESET", "${PURPLE_BOLD}lila$RESET")
+    var colors = arrayOf("${RED_BOLD}vermell $RESET", "${GREEN_BOLD}verd $RESET", "${BLUE_BOLD}blau $RESET", "${YELLOW_BOLD}groc $RESET", "${PURPLE_BOLD}lila $RESET")
 
     val lampada1 = Lampada(false, "blanc", 0, "Menjador")
     val lampada2 = Lampada(false, "blanc", 0, "Cuina")

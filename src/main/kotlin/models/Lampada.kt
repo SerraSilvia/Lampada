@@ -1,17 +1,16 @@
 package models
 
 class Lampada {
-    private var idLampada:String = ""
         private var encendreApagar:Boolean = false
-        private var color:String = "blanc"
+        private var color:Array<String> = arrayOf()
         private var intensitat:Int = 0
+        private var idLampada:String = ""
 
-
-        constructor(onOff:Boolean, color:String, intensitat:Int, id:String){
-            this.idLampada=id
+        constructor(onOff:Boolean, color: String, intensitat:Int, id:String){
             this.encendreApagar=onOff
-            this.color=color
+            this.color= arrayOf(color)
             this.intensitat=intensitat
+            this.idLampada=id
         }
 
         fun encendre() {
@@ -22,12 +21,12 @@ class Lampada {
             this.encendreApagar = false
         }
 
-        fun getColor(): String {
+        fun getColor(): Array<String> {
             return this.color
         }
 
         fun setColor(c: Array<String>) {
-            this.color = c.toString()
+            this.color = c
         }
 
 
