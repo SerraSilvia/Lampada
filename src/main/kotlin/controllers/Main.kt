@@ -11,17 +11,24 @@ fun main() {
 
     //lampada1:
     lampada1.encendre()
-    repeat(3) { lampada1.setColor(colors) }
+    repeat(3) {
+        lampada1.setColor(colors.random())
+        println("Lampada 1: "+ lampada1.getColor())
+    }
     lampada1.setIntensitat(5)
+
 
     //lampada2
     lampada2.encendre()
-    repeat(2) { lampada2.setColor(colors) }
+    repeat(2) {
+        lampada2.setColor(colors.random())
+        println("Lampada 2: "+ lampada2.getColor())
+    }
     lampada2.setIntensitat(5)
     lampada2.apagar()
-    lampada2.setColor(colors)
+    lampada2.setColor(colors.random())
     lampada2.encendre()
-    lampada2.setColor(colors)
+    lampada2.setColor(colors.random())
     lampada2.setIntensitat(5)
 
     println(lampada1)
